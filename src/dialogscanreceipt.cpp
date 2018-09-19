@@ -36,7 +36,8 @@ DialogScanReceipt::~DialogScanReceipt()
 
 int DialogScanReceipt::exec()
 {
-    m_CaptureImage->capture("img.jpg");
+    if (m_CaptureImage)
+        m_CaptureImage->capture("img.jpg");
     return QDialog::exec();
 }
 
